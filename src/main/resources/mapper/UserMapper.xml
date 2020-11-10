@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bruce.dao.IUserDao" >
+
+    <select id="selectByUserName" parameterType="String" resultType="com.bruce.bean.UserInfo">
+        select * from manage_user where login_name = #{username}
+    </select>
+</mapper>
+

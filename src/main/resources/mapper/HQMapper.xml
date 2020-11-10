@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bruce.dao.IHQDao" >
+
+    <select id="findall" resultType="com.bruce.bean.HQInfo">
+        select * from hqserver order by date desc
+    </select>
+
+    <select id="findfailure" resultType="com.bruce.bean.HQInfo">
+        select * from hqserver where main_instru = "FAIL" or tick_range = 'FAIL' or tick_nums ='FAIL' order by trading_date desc;
+    </select>
+
+</mapper>
+
