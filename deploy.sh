@@ -21,7 +21,9 @@ killTomcat()
     fi
 }
 cd $PROJ_PATH/ssmhq
-mvn clean install
+pwd
+#mvn clean install
+mvn install
 
 # 停tomcat
 killTomcat
