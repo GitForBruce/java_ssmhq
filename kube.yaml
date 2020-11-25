@@ -21,7 +21,8 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-    app:maven-deployment
+    app: maven-deployment
+    
   template:
     metadata:
       labels:
