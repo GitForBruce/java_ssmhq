@@ -13,16 +13,12 @@ spec:
   selector:
     app: maven
 ---
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: maven-deployment
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-        app: maven
-    
   template:
     metadata:
       labels:
@@ -30,7 +26,7 @@ spec:
     spec:
       containers:
         - name: maven
-          image: 192.168.200.129:5000/maven:latest
+          image: 192.168.0.129:5000/maven:latest
           ports:
           - containerPort: 8080
           env:
